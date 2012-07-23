@@ -10,6 +10,7 @@ NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-
 
 import re
 
+# return a list of english words of numbers
 def numbase():
   dic = []
   for line in open('1to99.txt', 'r'):
@@ -21,36 +22,20 @@ def numbase():
 
 # only works for 1000
 def approach1():
-  dic = []
   result = 0
-  for line in open('1to99.txt', 'r'):
-    match = re.search(r'\d+? = ([\w-]+)', line)
-    if match:
-      dic.append(match.group(1))
+  dic = numbase()
 
-  dic = [line.replace("-","") for line in dic]
-
+  # the number of characters in words one to 99
   from1to99 = sum([len(line) for line in dic])
   result += from1to99
-  print from1to99
 
   for i in dic[:9]:
-    print i
     # 100 and 101 - 199
     add = (len(i) + 7 + 3) * 99 + len(i) + 7
     result += (add + from1to99)
 
   #1000
   result += 11
-  print result
+  print "one to one thousand: ", result
 
-def approach2(n):
-  dic = numbase()
-  result = 0
-  size = len(str(n))
-
-  if size < 3:
-    result = sum([len(number) for number in dic[:n]]
-  elif size < 4:
-    for i in range(n%100):
-      
+approach1()
