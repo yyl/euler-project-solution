@@ -5,7 +5,7 @@ CHARACTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', '
 # given number m, return a list of divisors of m
 def findDivisors(m):
   D = [1,m]
-  for i in range(2,int(math.floor(math.sqrt(m)))):
+  for i in range(2,int(math.ceil(math.sqrt(m)))):
     if m%i == 0:
       D.append(i)
       if m/i != i:
