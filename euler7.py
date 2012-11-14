@@ -23,8 +23,8 @@ def euler7(n):
 	return c
 	
 if __name__ == '__main__':
-	t=timeit.Timer("euler7.euler7(10001)", "import euler7")
-	print t.repeat(1,1)
+#t=timeit.Timer("euler7.euler7(10001)", "import euler7")
+#print t.repeat(1,1)
 	#print t.timeit()
-	#a=euler7(10001)
-	#print a[10000]
+	a=euler7(10001)
+	print a[10000]

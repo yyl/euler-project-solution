@@ -36,6 +36,6 @@ def costMax(tri):
 
   return cost
 
-#euler18('complex.txt')
+euler18('complex.txt')
 t = Timer("euler18('triangle.txt')", "euler18")
 t.timeit()

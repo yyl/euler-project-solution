@@ -20,4 +20,11 @@ while 1:
   f = a.next()
   count += 1
 
+'''
+what is the sum of digits of 2^1000?
+'''
+
+number = str(2 ** 1000)
+digits = [int(a) for a in number]
+print sum(digits)
 
