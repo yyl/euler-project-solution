@@ -41,6 +41,8 @@ def approach2():
     if number not in all:
       print number
 
+  print sum(correct)
+
 def approach3():
   abundants = getAbundants(28123)
   def abundantsum(i):
