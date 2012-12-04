@@ -23,4 +23,18 @@ def isAbundant(i):
 def getAbundants(n):
   return [i for i in range(1, n+1) if isAbundant(i)]
 
+# find a list of prime number untill n
+def findPrime(n):
+	c=[2,3]
+	num=1
 
+	for i in range(5,n+1):
+		flag=0
+		for m in c:
+ 			if i%m is 0:
+				flag=1
+				break
+		if flag is 0 and i is not 1:
+			c.append(i)
+			
+	return c
