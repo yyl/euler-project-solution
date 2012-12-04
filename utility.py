@@ -19,7 +19,7 @@ def isAbundant(i):
   else:
     return False
 
-#given number n, return all abundant number in the range 1-n
+# given number n, return all abundant number in the range 1-n
 def getAbundants(n):
   return [i for i in range(1, n+1) if isAbundant(i)]
 
@@ -38,3 +38,17 @@ def findPrime(n):
 			c.append(i)
 			
 	return c
+
+# subroutine for findPrime2
+def isPrime(n):
+  for i in xrange(2, int(math.ceil(math.sqrt(n))) + 1):
+    if n%i == 0:
+      return False
+  return True
+
+# another way to find a list of primes until n
+# returns a generator
+def findPrime2(n):
+  for i in xrange(1, n):
+    if isPrime(i):
+      yield i
