@@ -42,7 +42,7 @@ def findPrime(n):
 # subroutine for findPrime2
 def isPrime(n):
   for i in xrange(2, int(math.ceil(math.sqrt(n))) + 1):
-    if n%i == 0:
+    if n%i == 0 and n != 2:
       return False
   return True
 
